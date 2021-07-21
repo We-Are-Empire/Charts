@@ -461,6 +461,8 @@ open class ChartViewBase: NSUIView, ChartDataProvider, AnimatorDelegate
 
         // redraw the chart
         setNeedsDisplay()
+        
+        print("we tried to highlight")
     }
     
     /// - Returns: The Highlight object (contains x-index and DataSet index) of the
