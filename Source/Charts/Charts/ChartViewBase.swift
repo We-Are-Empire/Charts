@@ -442,16 +442,19 @@ open class ChartViewBase: NSUIView, ChartDataProvider, AnimatorDelegate
             else
         {
             
-            if high == nil {
+            if let h = high {
+                if let entry = data?.entry(for: h) {
+                    
+                }
+                else {
+                    print("there's an issue with entry")
+                }
+            }
+            else {
                 print("there is no highlight. rip")
             }
             
-            if let entry = data?.entry(for: high) {
-                
-            }
-            else {
-                print("there's an issue with entry")
-            }
+            
             
             
                 high = nil
