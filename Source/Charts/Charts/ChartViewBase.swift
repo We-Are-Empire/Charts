@@ -442,7 +442,7 @@ open class ChartViewBase: NSUIView, ChartDataProvider, AnimatorDelegate
             else
         {
             
-            if let high == nil {
+            if high == nil {
                 print("there is no highlight. rip")
             }
             
