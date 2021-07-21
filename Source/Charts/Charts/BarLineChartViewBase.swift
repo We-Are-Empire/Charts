@@ -533,6 +533,7 @@ open class BarLineChartViewBase: ChartViewBase, BarLineScatterCandleBubbleChartD
     {
         if data === nil
         {
+            print("there is no data")
             return
         }
         
