@@ -441,6 +441,19 @@ open class ChartViewBase: NSUIView, ChartDataProvider, AnimatorDelegate
             let entry = data?.entry(for: h)
             else
         {
+            
+            if let high == nil {
+                print("there is no highlight. rip")
+            }
+            
+            if let let entry = data?.entry(for: h) {
+                
+            }
+            else {
+                print("there's an issue with entry")
+            }
+            
+            
                 high = nil
                 highlighted.removeAll(keepingCapacity: false)
                 if callDelegate
