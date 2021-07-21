@@ -441,22 +441,6 @@ open class ChartViewBase: NSUIView, ChartDataProvider, AnimatorDelegate
             let entry = data?.entry(for: h)
             else
         {
-            
-            if let h = high {
-                if let entry = data?.entry(for: h) {
-                    
-                }
-                else {
-                    print("there's an issue with entry")
-                }
-            }
-            else {
-                print("there is no highlight. rip")
-            }
-            
-            
-            
-            
                 high = nil
                 highlighted.removeAll(keepingCapacity: false)
                 if callDelegate
@@ -477,8 +461,6 @@ open class ChartViewBase: NSUIView, ChartDataProvider, AnimatorDelegate
 
         // redraw the chart
         setNeedsDisplay()
-        
-        print("we tried to highlight")
     }
     
     /// - Returns: The Highlight object (contains x-index and DataSet index) of the
