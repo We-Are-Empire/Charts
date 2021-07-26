@@ -131,9 +131,9 @@ open class BarLineChartViewBase: ChartViewBase, BarLineScatterCandleBubbleChartD
         
         #if os(iOS)
         
-            _tapGestureRecognizer.delaysTouchesBegan = true
+            /*_tapGestureRecognizer.delaysTouchesBegan = true
             _doubleTapGestureRecognizer.delaysTouchesBegan = true
-            _panGestureRecognizer.delaysTouchesBegan = true
+            _panGestureRecognizer.delaysTouchesBegan = true*/
         
             _tapGestureRecognizer.cancelsTouchesInView = false
             _doubleTapGestureRecognizer.cancelsTouchesInView = false
