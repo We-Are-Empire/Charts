@@ -128,13 +128,23 @@ open class BarLineChartViewBase: ChartViewBase, BarLineScatterCandleBubbleChartD
         
         _panGestureRecognizer.delegate = self
         
+        
+        #if os(iOS)
+        
+            _tapGestureRecognizer.delaysTouchesBegan = true
+            _doubleTapGestureRecognizer.delaysTouchesBegan = true
+            _panGestureRecognizer.delaysTouchesBegan = true
+        
+        #endif
+        
         self.addGestureRecognizer(_tapGestureRecognizer)
         self.addGestureRecognizer(_doubleTapGestureRecognizer)
         self.addGestureRecognizer(_panGestureRecognizer)
         
         _doubleTapGestureRecognizer.isEnabled = _doubleTapToZoomEnabled
         _panGestureRecognizer.isEnabled = _dragXEnabled || _dragYEnabled
-
+        
+        
         #if !os(tvOS)
             _pinchGestureRecognizer = NSUIPinchGestureRecognizer(target: self, action: #selector(BarLineChartViewBase.pinchGestureRecognized(_:)))
             _pinchGestureRecognizer.delegate = self
